@@ -1,3 +1,6 @@
+Ah, capito! Ecco il file in modo che tu possa copiarlo e incollarlo direttamente senza doverlo modificare:
+
+```markdown
 # Spotify and osu! Widgets for Astro
 
 This project provides customizable Spotify and osu! widgets for your Astro-based website. These widgets display your current Spotify listening status and osu! player statistics.
@@ -26,52 +29,66 @@ This project provides customizable Spotify and osu! widgets for your Astro-based
 
    ```bash
    npm install @astrojs/svelte svelte @vercel/kv zod
+   ```
 
-Add the Svelte integration to your Astro config file (astro.config.mjs):
+2. Add the Svelte integration to your Astro config file (`astro.config.mjs`):
 
-import { defineConfig } from 'astro/config';
-import svelte from '@astrojs/svelte';
+   ```javascript
+   import { defineConfig } from 'astro/config';
+   import svelte from '@astrojs/svelte';
 
-export default defineConfig({
-  integrations: [svelte()],
-});
+   export default defineConfig({
+     integrations: [svelte()],
+   });
+   ```
 
-Configuration
-Create a .env file in your project root and add the following variables:
+## Configuration
 
-SPOTIFY_CLIENT_ID=your_spotify_client_id
-SPOTIFY_CLIENT_SECRET=your_spotify_client_secret
-SPOTIFY_REFRESH_TOKEN=your_spotify_refresh_token
-OSU_CLIENT_ID=your_osu_client_id
-OSU_CLIENT_SECRET=your_osu_client_secret
-OSU_USER_ID=your_osu_user_id
-KV_REST_API_URL=your_vercel_kv_url
-KV_REST_API_TOKEN=your_vercel_kv_token
+1. Create a `.env` file in your project root and add the following variables:
 
-Set up Vercel KV for caching (optional but recommended):
+   ```bash
+   SPOTIFY_CLIENT_ID=your_spotify_client_id
+   SPOTIFY_CLIENT_SECRET=your_spotify_client_secret
+   SPOTIFY_REFRESH_TOKEN=your_spotify_refresh_token
+   OSU_CLIENT_ID=your_osu_client_id
+   OSU_CLIENT_SECRET=your_osu_client_secret
+   OSU_USER_ID=your_osu_user_id
+   KV_REST_API_URL=your_vercel_kv_url
+   KV_REST_API_TOKEN=your_vercel_kv_token
+   ```
 
-Create a Vercel account and set up KV storage
-Add the KV_REST_API_URL and KV_REST_API_TOKEN to your environment variables
-Usage
-Add the Spotify widget to your Astro page:
+2. Set up Vercel KV for caching (optional but recommended):
 
----
-import Spotify from '../components/Spotify.svelte';
----
+   - Create a Vercel account and set up KV storage
+   - Add the `KV_REST_API_URL` and `KV_REST_API_TOKEN` to your environment variables
 
-<Spotify client:load />
+## Usage
 
-Add the osu! widget to your Astro page:
+1. Add the Spotify widget to your Astro page:
 
----
-import Osu from '../components/Osu.svelte';
----
+   ```astro
+   ---
+   import Spotify from '../components/Spotify.svelte';
+   ---
 
-<Osu client:load />
+   <Spotify client:load />
+   ```
 
-File Structure
+2. Add the osu! widget to your Astro page:
+
+   ```astro
+   ---
+   import Osu from '../components/Osu.svelte';
+   ---
+
+   <Osu client:load />
+   ```
+
+## File Structure
+
 Place the following files in your Astro project:
 
+```plaintext
 src/
 ├── components/
 │   ├── Spotify.svelte
@@ -80,18 +97,24 @@ src/
     └── api/
         ├── spotify.json.ts
         └── osu.json.ts
+```
 
-Customization
-You can customize the appearance of the widgets by modifying the Svelte components (Spotify.svelte and Osu.svelte). The widgets use Tailwind CSS classes for styling, which you can adjust to match your site's design.
+## Customization
 
-# Troubleshooting
-If you encounter CORS issues, ensure your Astro project is properly configured to handle API routes.
-Check that all environment variables are correctly set.
-For Spotify issues, ensure your refresh token is valid and has the necessary scopes.
-For osu! issues, verify that your API credentials are correct and that you're not exceeding rate limits.
+You can customize the appearance of the widgets by modifying the Svelte components (`Spotify.svelte` and `Osu.svelte`). The widgets use Tailwind CSS classes for styling, which you can adjust to match your site's design.
 
-# Contributing
+## Troubleshooting
+
+- If you encounter CORS issues, ensure your Astro project is properly configured to handle API routes.
+- Check that all environment variables are correctly set.
+- For Spotify issues, ensure your refresh token is valid and has the necessary scopes.
+- For osu! issues, verify that your API credentials are correct and that you're not exceeding rate limits.
+
+## Contributing
+
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-License
+## License
+
 This project is open source and available under the MIT License.
+```

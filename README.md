@@ -61,7 +61,7 @@ This project provides customizable Spotify and osu! widgets for your Astro-based
    - Create a Vercel account and set up KV storage
    - Add the `KV_REST_API_URL` and `KV_REST_API_TOKEN` to your environment variables
 
-3. For a guide on how to get a spotify refresh token go (here)[https://github.com/vimfn/get-spotify-refresh-token]
+3. For a guide on how to get a spotify refresh token go to https://github.com/vimfn/get-spotify-refresh-token
 
 4. osu! API
 

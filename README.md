@@ -1,5 +1,3 @@
-Ah, capito! Ecco il file in modo che tu possa copiarlo e incollarlo direttamente senza doverlo modificare:
-
 ```markdown
 # Spotify and osu! Widgets for Astro
 

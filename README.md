@@ -1,5 +1,7 @@
 # Spotify and osu! Widgets for Astro
 
+![image](./other-notneededforinstall/image.png)
+
 This project provides customizable Spotify and osu! widgets for your Astro-based website. These widgets display your current Spotify listening status and osu! player statistics.
 
 ## Table of Contents

@@ -61,6 +61,15 @@ This project provides customizable Spotify and osu! widgets for your Astro-based
    - Create a Vercel account and set up KV storage
    - Add the `KV_REST_API_URL` and `KV_REST_API_TOKEN` to your environment variables
 
+3. For a guide on how to get a spotify refresh token go (here)[https://github.com/vimfn/get-spotify-refresh-token]
+
+4. osu! API
+
+- Go to the osu! OAuth Application page.
+- Create a new application and fill in the required information.
+- Once created, you will get your Client ID and Client Secret.
+- Retrieve your User ID from your osu! profile URL (e.g., if your profile is https://osu.ppy.sh/users/123456, your User ID is 123456).
+
 ## Usage
 
 1. Add the Spotify widget to your Astro page:
